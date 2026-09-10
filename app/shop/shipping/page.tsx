@@ -1,11 +1,3 @@
 export default function ShippingPage() {
-  return (
-    <article className="shop-narrow">
-      <h1 className="shop-page-title">Shipping & tracking</h1>
-      <p className="shop-lede">
-        Demo orders ship UPS and mark delivered so ShieldPay can collect tracking evidence. Free
-        ground shipping over $75.
-      </p>
-    </article>
-  );
+  return <div className="page-container info-page"><p className="outdoor-eyebrow">WE&apos;LL HANDLE THE REST</p><h1>GOOD THINGS ARE ON THE WAY.</h1><p className="page-intro">Complimentary ground shipping on orders $75 or more. Because your next adventure shouldn&apos;t have to wait.</p><section className="info-section"><h2>STANDARD DELIVERY</h2><p>Our demo shipping rate is $8 for orders below $75 and free for orders of $75 or more. Standard delivery is represented as 3–5 business days within the United States.</p></section><section className="info-section"><h2>TRACK YOUR ADVENTURE</h2><p>Visit Your Orders and enter the email you used at checkout to view your order status. For privacy, orders are available only in the browser where you placed them.</p></section><section className="info-section"><h2>DEMO SHIPPING</h2><p>This storefront simulates purchases. No physical products are shipped, and no real tracking numbers are generated. Your order details remain available to try the ShieldPay dispute flow.</p></section></div>;
 }

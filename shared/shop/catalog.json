@@ -6,11 +6,31 @@
     "phone": "+1 (415) 555-0142"
   },
   "collections": [
-    { "handle": "all", "title": "Shop All", "description": "The full Northline catalog." },
-    { "handle": "apparel", "title": "Apparel", "description": "Everyday layers built to last." },
-    { "handle": "home", "title": "Home", "description": "Quiet objects for living spaces." },
-    { "handle": "tech", "title": "Tech", "description": "Tools that stay out of the way." },
-    { "handle": "accessories", "title": "Accessories", "description": "Small pieces, finished well." }
+    {
+      "handle": "all",
+      "title": "Shop All",
+      "description": "The full Northline catalog."
+    },
+    {
+      "handle": "apparel",
+      "title": "Apparel",
+      "description": "Everyday layers built to last."
+    },
+    {
+      "handle": "home",
+      "title": "Home",
+      "description": "Quiet objects for living spaces."
+    },
+    {
+      "handle": "tech",
+      "title": "Tech",
+      "description": "Tools that stay out of the way."
+    },
+    {
+      "handle": "accessories",
+      "title": "Accessories",
+      "description": "Small pieces, finished well."
+    }
   ],
   "products": [
     {
@@ -22,15 +42,30 @@
       "compareAtPrice": 120,
       "currency": "USD",
       "category": "apparel",
-      "tags": ["bestseller", "wool"],
+      "tags": [
+        "bestseller",
+        "wool"
+      ],
       "inventory": 42,
       "rating": 4.8,
       "reviewCount": 128,
       "image": "sweater",
       "variants": [
-        { "id": "nl-001-s", "name": "Small", "available": true },
-        { "id": "nl-001-m", "name": "Medium", "available": true },
-        { "id": "nl-001-l", "name": "Large", "available": true }
+        {
+          "id": "nl-001-s",
+          "name": "Small",
+          "available": true
+        },
+        {
+          "id": "nl-001-m",
+          "name": "Medium",
+          "available": true
+        },
+        {
+          "id": "nl-001-l",
+          "name": "Large",
+          "available": true
+        }
       ]
     },
     {
@@ -42,15 +77,29 @@
       "compareAtPrice": null,
       "currency": "USD",
       "category": "apparel",
-      "tags": ["new"],
+      "tags": [
+        "new"
+      ],
       "inventory": 31,
       "rating": 4.6,
       "reviewCount": 64,
       "image": "shirt",
       "variants": [
-        { "id": "nl-002-s", "name": "Small", "available": true },
-        { "id": "nl-002-m", "name": "Medium", "available": true },
-        { "id": "nl-002-l", "name": "Large", "available": true }
+        {
+          "id": "nl-002-s",
+          "name": "Small",
+          "available": true
+        },
+        {
+          "id": "nl-002-m",
+          "name": "Medium",
+          "available": true
+        },
+        {
+          "id": "nl-002-l",
+          "name": "Large",
+          "available": true
+        }
       ]
     },
     {
@@ -62,15 +111,29 @@
       "compareAtPrice": 175,
       "currency": "USD",
       "category": "apparel",
-      "tags": ["denim"],
+      "tags": [
+        "denim"
+      ],
       "inventory": 18,
       "rating": 4.9,
       "reviewCount": 91,
       "image": "denim",
       "variants": [
-        { "id": "nl-003-30", "name": "30", "available": true },
-        { "id": "nl-003-32", "name": "32", "available": true },
-        { "id": "nl-003-34", "name": "34", "available": true }
+        {
+          "id": "nl-003-30",
+          "name": "30",
+          "available": true
+        },
+        {
+          "id": "nl-003-32",
+          "name": "32",
+          "available": true
+        },
+        {
+          "id": "nl-003-34",
+          "name": "34",
+          "available": true
+        }
       ]
     },
     {
@@ -82,12 +145,20 @@
       "compareAtPrice": null,
       "currency": "USD",
       "category": "home",
-      "tags": ["bestseller"],
+      "tags": [
+        "bestseller"
+      ],
       "inventory": 24,
       "rating": 4.7,
       "reviewCount": 53,
       "image": "throw",
-      "variants": [{ "id": "nl-004-one", "name": "One size", "available": true }]
+      "variants": [
+        {
+          "id": "nl-004-one",
+          "name": "One size",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-005",
@@ -98,12 +169,20 @@
       "compareAtPrice": 54,
       "currency": "USD",
       "category": "home",
-      "tags": ["kitchen"],
+      "tags": [
+        "kitchen"
+      ],
       "inventory": 56,
       "rating": 4.5,
       "reviewCount": 210,
       "image": "pourer",
-      "variants": [{ "id": "nl-005-one", "name": "One size", "available": true }]
+      "variants": [
+        {
+          "id": "nl-005-one",
+          "name": "One size",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-006",
@@ -114,12 +193,20 @@
       "compareAtPrice": null,
       "currency": "USD",
       "category": "home",
-      "tags": ["wood"],
+      "tags": [
+        "wood"
+      ],
       "inventory": 15,
       "rating": 4.4,
       "reviewCount": 27,
       "image": "tray",
-      "variants": [{ "id": "nl-006-one", "name": "One size", "available": true }]
+      "variants": [
+        {
+          "id": "nl-006-one",
+          "name": "One size",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-007",
@@ -130,12 +217,21 @@
       "compareAtPrice": 159,
       "currency": "USD",
       "category": "tech",
-      "tags": ["bestseller", "audio"],
+      "tags": [
+        "bestseller",
+        "audio"
+      ],
       "inventory": 40,
       "rating": 4.3,
       "reviewCount": 340,
       "image": "buds",
-      "variants": [{ "id": "nl-007-one", "name": "Graphite", "available": true }]
+      "variants": [
+        {
+          "id": "nl-007-one",
+          "name": "Graphite",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-008",
@@ -146,12 +242,20 @@
       "compareAtPrice": null,
       "currency": "USD",
       "category": "tech",
-      "tags": ["lighting"],
+      "tags": [
+        "lighting"
+      ],
       "inventory": 22,
       "rating": 4.6,
       "reviewCount": 77,
       "image": "lamp",
-      "variants": [{ "id": "nl-008-one", "name": "Matte black", "available": true }]
+      "variants": [
+        {
+          "id": "nl-008-one",
+          "name": "Matte black",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-009",
@@ -162,12 +266,20 @@
       "compareAtPrice": null,
       "currency": "USD",
       "category": "accessories",
-      "tags": ["leather"],
+      "tags": [
+        "leather"
+      ],
       "inventory": 60,
       "rating": 4.8,
       "reviewCount": 189,
       "image": "wallet",
-      "variants": [{ "id": "nl-009-one", "name": "Natural", "available": true }]
+      "variants": [
+        {
+          "id": "nl-009-one",
+          "name": "Natural",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-010",
@@ -178,28 +290,44 @@
       "compareAtPrice": 88,
       "currency": "USD",
       "category": "accessories",
-      "tags": ["bag"],
+      "tags": [
+        "bag"
+      ],
       "inventory": 33,
       "rating": 4.7,
       "reviewCount": 102,
       "image": "tote",
-      "variants": [{ "id": "nl-010-one", "name": "Olive", "available": true }]
+      "variants": [
+        {
+          "id": "nl-010-one",
+          "name": "Olive",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-011",
       "handle": "wool-beanie",
       "title": "Ribbed Wool Beanie",
-      "description": "A double-layer merino beanie with a low profile. No logo, no pom — just warmth.",
+      "description": "A double-layer merino beanie with a low profile. No logo, no pom \u2014 just warmth.",
       "price": 36,
       "compareAtPrice": null,
       "currency": "USD",
       "category": "accessories",
-      "tags": ["wool"],
+      "tags": [
+        "wool"
+      ],
       "inventory": 80,
       "rating": 4.5,
       "reviewCount": 58,
       "image": "beanie",
-      "variants": [{ "id": "nl-011-one", "name": "Charcoal", "available": true }]
+      "variants": [
+        {
+          "id": "nl-011-one",
+          "name": "Charcoal",
+          "available": true
+        }
+      ]
     },
     {
       "id": "nl-012",
@@ -210,12 +338,350 @@
       "compareAtPrice": 180,
       "currency": "USD",
       "category": "accessories",
-      "tags": ["bestseller", "bag"],
+      "tags": [
+        "bestseller",
+        "bag"
+      ],
       "inventory": 19,
       "rating": 4.9,
       "reviewCount": 141,
       "image": "pack",
-      "variants": [{ "id": "nl-012-one", "name": "Black", "available": true }]
+      "variants": [
+        {
+          "id": "nl-012-one",
+          "name": "Black",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "moab-3",
+      "handle": "moab-3",
+      "title": "Moab 3",
+      "description": "The mother of all boots. Out-of-the-box comfort, durable leathers, and supportive traction for wherever the trail takes you.",
+      "price": 120,
+      "compareAtPrice": null,
+      "currency": "USD",
+      "category": "hiking",
+      "tags": [
+        "bestseller",
+        "trail-tested"
+      ],
+      "inventory": 40,
+      "rating": 4.8,
+      "reviewCount": 1248,
+      "image": "moab",
+      "variants": [
+        {
+          "id": "moab-3-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "moab-3-7-5",
+          "name": "7.5",
+          "available": true
+        },
+        {
+          "id": "moab-3-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "moab-3-8-5",
+          "name": "8.5",
+          "available": true
+        },
+        {
+          "id": "moab-3-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "moab-3-9-5",
+          "name": "9.5",
+          "available": true
+        },
+        {
+          "id": "moab-3-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "moab-3-10-5",
+          "name": "10.5",
+          "available": true
+        },
+        {
+          "id": "moab-3-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "moab-3-11-5",
+          "name": "11.5",
+          "available": true
+        },
+        {
+          "id": "moab-3-12",
+          "name": "12",
+          "available": true
+        },
+        {
+          "id": "moab-3-13",
+          "name": "13",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "moab-speed-2",
+      "handle": "moab-speed-2",
+      "title": "Moab Speed 2",
+      "description": "Light on your feet. Big on adventure. A sneaker-light hiking shoe with responsive cushioning and confident trail traction.",
+      "price": 140,
+      "compareAtPrice": null,
+      "currency": "USD",
+      "category": "hiking",
+      "tags": [
+        "new",
+        "trail-tested"
+      ],
+      "inventory": 32,
+      "rating": 4.7,
+      "reviewCount": 386,
+      "image": "speed",
+      "variants": [
+        {
+          "id": "moab-speed-2-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "moab-speed-2-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "moab-speed-2-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "moab-speed-2-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "moab-speed-2-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "moab-speed-2-12",
+          "name": "12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "agility-peak-6",
+      "handle": "agility-peak-6",
+      "title": "Agility Peak 6",
+      "description": "Find your flow on any terrain. Responsive cushioning and a grippy outsole keep you focused on nothing but the run.",
+      "price": 150,
+      "compareAtPrice": null,
+      "currency": "USD",
+      "category": "trail-running",
+      "tags": [
+        "new",
+        "run-ready"
+      ],
+      "inventory": 28,
+      "rating": 4.9,
+      "reviewCount": 214,
+      "image": "agility",
+      "variants": [
+        {
+          "id": "agility-peak-6-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "agility-peak-6-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "agility-peak-6-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "agility-peak-6-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "agility-peak-6-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "agility-peak-6-12",
+          "name": "12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "jungle-moc",
+      "handle": "jungle-moc",
+      "title": "Jungle Moc",
+      "description": "An icon for a reason. Soft suede and a supportive footbed for easy, everyday comfort. Slip on. Get out.",
+      "price": 100,
+      "compareAtPrice": null,
+      "currency": "USD",
+      "category": "everyday",
+      "tags": [
+        "bestseller",
+        "iconic"
+      ],
+      "inventory": 46,
+      "rating": 4.8,
+      "reviewCount": 2367,
+      "image": "jungle",
+      "variants": [
+        {
+          "id": "jungle-moc-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "jungle-moc-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "jungle-moc-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "jungle-moc-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "jungle-moc-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "jungle-moc-12",
+          "name": "12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "vapor-glove-6",
+      "handle": "vapor-glove-6",
+      "title": "Vapor Glove 6",
+      "description": "Less between you and the ground. A minimalist, zero-drop design gives you a natural connection with every step.",
+      "price": 100,
+      "compareAtPrice": null,
+      "currency": "USD",
+      "category": "barefoot",
+      "tags": [
+        "minimalist"
+      ],
+      "inventory": 24,
+      "rating": 4.7,
+      "reviewCount": 527,
+      "image": "barefoot",
+      "variants": [
+        {
+          "id": "vapor-glove-6-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "vapor-glove-6-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "vapor-glove-6-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "vapor-glove-6-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "vapor-glove-6-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "vapor-glove-6-12",
+          "name": "12",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": "speedarc",
+      "handle": "speedarc",
+      "title": "SpeedARC",
+      "description": "The future of fast hiking. Precision-engineered comfort and responsive cushioning take you from city streets to untamed trails.",
+      "price": 170,
+      "compareAtPrice": 200,
+      "currency": "USD",
+      "category": "hiking",
+      "tags": [
+        "sale",
+        "fast-hiking"
+      ],
+      "inventory": 19,
+      "rating": 4.8,
+      "reviewCount": 163,
+      "image": "arc",
+      "variants": [
+        {
+          "id": "speedarc-7",
+          "name": "7",
+          "available": true
+        },
+        {
+          "id": "speedarc-8",
+          "name": "8",
+          "available": true
+        },
+        {
+          "id": "speedarc-9",
+          "name": "9",
+          "available": true
+        },
+        {
+          "id": "speedarc-10",
+          "name": "10",
+          "available": true
+        },
+        {
+          "id": "speedarc-11",
+          "name": "11",
+          "available": true
+        },
+        {
+          "id": "speedarc-12",
+          "name": "12",
+          "available": true
+        }
+      ]
     }
   ]
 }

@@ -38,7 +38,9 @@ export async function listShopProducts(options?: {
   }
   let list = catalog.products as ShopProduct[];
   if (options?.collection && options.collection !== "all") {
-    list = list.filter((p) => p.category === options.collection);
+    list = options.collection === "sale"
+      ? list.filter((p) => Boolean(p.compareAtPrice))
+      : list.filter((p) => p.category === options.collection);
   }
   const q = (options?.q ?? "").toLowerCase();
   if (q) {
@@ -153,6 +155,12 @@ export function productSwatch(image: string): { bg: string; ink: string } {
     tote: { bg: "#d1fae5", ink: "#064e3b" },
     beanie: { bg: "#e2e8f0", ink: "#1e293b" },
     pack: { bg: "#d4d4d4", ink: "#171717" },
+    moab: { bg: "#d7d5bf", ink: "#3f4438" },
+    speed: { bg: "#d9dfbc", ink: "#3b4a35" },
+    agility: { bg: "#f2c2a9", ink: "#63382b" },
+    jungle: { bg: "#ddd0bf", ink: "#514637" },
+    barefoot: { bg: "#cbd2cb", ink: "#303934" },
+    arc: { bg: "#d8d7cd", ink: "#3e4842" },
   };
   return map[image] ?? { bg: "#e7e5e4", ink: "#44403c" };
 }

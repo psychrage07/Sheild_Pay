@@ -330,7 +330,9 @@ const server = http.createServer(async (req, res) => {
       const q = (url.searchParams.get("q") ?? "").toLowerCase();
       let list = catalog.products;
       if (collection && collection !== "all") {
-        list = list.filter((p) => p.category === collection);
+        list = collection === "sale"
+          ? list.filter((p) => Boolean(p.compareAtPrice))
+          : list.filter((p) => p.category === collection);
       }
       if (q) {
         list = list.filter(
@@ -553,11 +555,20 @@ const server = http.createServer(async (req, res) => {
       const orderId = body.orderId ?? "1042";
       if (!orders.has(orderId)) seedLegacyOrder(orderId);
       const order = orders.get(orderId);
+      const reason = body.reason ?? "product_not_received";
       const result = await emitDisputeForOrder(
         order,
-        body.reason ?? "product_not_received",
+        reason,
         body.merchantId ?? "demo-merchant"
       );
+      order.disputeReason = reason;
+      order.status = "Dispute opened";
+      order.shieldpay = {
+        ...(order.shieldpay ?? {}),
+        disputeId: result.disputeId,
+        scenario: { label: reason, reason },
+      };
+      orders.set(orderId, order);
       return json(res, 200, {
         success: result.status < 400,
         disputeId: result.disputeId,

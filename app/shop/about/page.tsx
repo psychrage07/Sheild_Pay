@@ -1,12 +1,6 @@
+import Link from "next/link";
+import ShopIcon from "../components/ShopIcon";
+
 export default function AboutPage() {
-  return (
-    <article className="shop-narrow">
-      <h1 className="shop-page-title">About Northline</h1>
-      <p className="shop-lede">
-        Northline is a full demo storefront — catalog, cart, checkout, orders, and customer
-        chargebacks — built so ShieldPay has a real purchase to investigate. Nothing here charges
-        a live card.
-      </p>
-    </article>
-  );
+  return <div className="page-container info-page"><div className="breadcrumb"><Link href="/shop">Home</Link><span>/</span><span>About</span></div><p className="outdoor-eyebrow">WHATEVER YOUR TRAIL</p><h1>THE OUTSIDE IS IN OUR DNA.</h1><p className="page-intro">Northline makes considered gear for getting out there. From your neighborhood path to the trail less traveled, we believe the outside is for everyone.</p><div className="about-image outdoor-about-art"><ShopIcon name="mountain" size={58} /><span>40+ YEARS. COUNTLESS TRAILS.</span></div><section className="info-section"><h2>BUILT FOR THE OUTSIDE</h2><p>Comfort that goes the distance. Traction you can trust. Thoughtful details that make every mile feel better. We&apos;re inspired by the places our feet can take us—and the people we meet along the way.</p></section><section className="info-section" id="responsibility"><h2>OUR RESPONSIBILITY</h2><p>A love of the outdoors comes with a responsibility to protect it. Choose durable gear, take care of what you own, and leave every trail a little better than you found it.</p></section><section className="info-section" id="community"><h2>THE OUTSIDE IS FOR EVERYONE</h2><p>There is no right pace, perfect path, or minimum distance. Everyone belongs outside. Start where you are. Go as you are. We&apos;ll meet you out there.</p></section><section className="info-section"><h2>ABOUT THIS DEMO</h2><p>This is an independent Northline demo storefront built to demonstrate a complete shopping and ShieldPay dispute flow. Orders, payments, and disputes are simulated; no live cards are charged or products shipped.</p></section><div className="center-actions"><Link className="shop-btn-primary" href="/shop/products">FIND YOUR OUTSIDE <ShopIcon name="arrow" size={18} /></Link><Link className="shop-btn-light" href="/shop/contact">CONTACT US</Link></div></div>;
 }

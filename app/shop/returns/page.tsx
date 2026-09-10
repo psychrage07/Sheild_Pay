@@ -1,11 +1,3 @@
 export default function ReturnsPage() {
-  return (
-    <article className="shop-narrow">
-      <h1 className="shop-page-title">Returns</h1>
-      <p className="shop-lede">
-        If an item never arrived or wasn&apos;t as described, open the order and file a dispute.
-        The merchant dashboard runs network rules and drafts the rebuttal.
-      </p>
-    </article>
-  );
+  return <div className="page-container info-page"><p className="outdoor-eyebrow">FIND YOUR PERFECT FIT</p><h1>LESS WORRY. MORE WANDER.</h1><p className="page-intro">Your next favorite piece should feel just right. Our demo store represents a simple 30-day returns policy.</p><section className="info-section"><h2>EASY 30-DAY RETURNS</h2><p>In a real purchase, unworn footwear in its original packaging would be eligible for return within 30 days. This demo does not ship products or process real refunds.</p></section><section className="info-section"><h2>SOMETHING NOT RIGHT?</h2><p>Open Your Orders, select your purchase, and choose Report an Issue. You can file a simulated dispute for an item not received, an item not as described, a duplicate charge, or another issue.</p></section><section className="info-section"><h2>HERE TO HELP</h2><p>Send us a message through our contact form. Demo messages are saved, but this environment does not send email replies. No bank or card network is contacted when a dispute is filed.</p></section></div>;
 }

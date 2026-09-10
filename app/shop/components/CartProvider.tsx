@@ -28,6 +28,8 @@ interface CartContextValue {
   setQty: (productId: string, variant: string, quantity: number) => void;
   remove: (productId: string, variant: string) => void;
   clear: () => void;
+  notice: string;
+  setNotice: (notice: string) => void;
 }
 
 const CartContext = createContext<CartContextValue | null>(null);
@@ -36,6 +38,7 @@ const STORAGE_KEY = "northline-cart";
 export function CartProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CartLine[]>([]);
   const [ready, setReady] = useState(false);
+  const [notice, setNotice] = useState("");
 
   useEffect(() => {
     try {
@@ -52,6 +55,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(lines));
   }, [lines, ready]);
 
+  useEffect(() => {
+    if (!notice) return;
+    const timer = window.setTimeout(() => setNotice(""), 4500);
+    return () => window.clearTimeout(timer);
+  }, [notice]);
+
   const add = useCallback((line: Omit<CartLine, "quantity">, quantity = 1) => {
     setLines((prev) => {
       const idx = prev.findIndex(
@@ -64,6 +73,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
       return [...prev, { ...line, quantity }];
     });
+    setNotice(`${line.title} added to your bag`);
   }, []);
 
   const setQty = useCallback((productId: string, variant: string, quantity: number) => {
@@ -95,8 +105,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
       setQty,
       remove,
       clear,
+      notice,
+      setNotice,
     }),
-    [lines, add, setQty, remove, clear]
+    [lines, add, setQty, remove, clear, notice]
   );
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

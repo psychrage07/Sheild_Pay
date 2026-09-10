@@ -1,32 +1,29 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useState, type FormEvent } from "react";
+import ShopIcon from "../components/ShopIcon";
 
 export default function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState("");
+  const [busy, setBusy] = useState(false);
 
-  function onSubmit(event: FormEvent) {
+  async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSent(true);
+    const form = event.currentTarget;
+    setBusy(true);
+    setStatus("");
+    try {
+      const response = await fetch("/api/shop/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: new FormData(form).get("email"), message: new FormData(form).get("message") }) });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error ?? "Please try again.");
+      setStatus("Thanks for reaching out. Your demo message has been saved.");
+      form.reset();
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Please try again.");
+    } finally {
+      setBusy(false);
+    }
   }
 
-  return (
-    <article className="shop-narrow">
-      <h1 className="shop-page-title">Contact</h1>
-      <p className="shop-muted" style={{ marginTop: 8 }}>
-        hello@northline.shop · +1 (415) 555-0142
-      </p>
-      {sent ? (
-        <p className="shop-lede">Thanks — we logged this demo message.</p>
-      ) : (
-        <form onSubmit={onSubmit} className="shop-form-stack" style={{ marginTop: 24 }}>
-          <input required placeholder="Email" className="shop-field" />
-          <textarea required placeholder="How can we help?" className="shop-field" style={{ minHeight: 112 }} />
-          <button type="submit" className="shop-btn-primary">
-            Send
-          </button>
-        </form>
-      )}
-    </article>
-  );
+  return <div className="page-container info-page"><p className="outdoor-eyebrow">WE&apos;RE HERE FOR YOU</p><h1>LET&apos;S TALK TRAIL.</h1><p className="page-intro">Questions about your gear, your order, or your next step? Drop us a note.</p><p className="muted">hello@northline.shop · +1 (415) 555-0142</p><form onSubmit={submit} className="contact-form"><label>Email address<input required type="email" name="email" placeholder="you@example.com" /></label><label>How can we help?<textarea required name="message" minLength={5} maxLength={5000} placeholder="Tell us what&apos;s on your mind…" rows={6} /></label><button className="shop-btn-primary" disabled={busy} type="submit">{busy ? "SENDING…" : "SEND MESSAGE"}<ShopIcon name="arrow" size={18} /></button><p role="status">{status}</p><p className="small muted">Demo messages are saved for this session. No email is sent.</p></form></div>;
 }
