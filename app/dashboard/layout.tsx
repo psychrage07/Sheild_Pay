@@ -1,22 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { Instrument_Serif, Source_Sans_3 } from "next/font/google";
+import Link from "next/link";
 import DashboardNav from "./components/DashboardNav";
 import { ThemeProvider } from "./components/ThemeProvider";
 import "./globals.css";
-
-const sans = Source_Sans_3({
-  subsets: ["latin"],
-  variable: "--font-dash-sans",
-  display: "swap",
-});
-
-const serif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-dash-serif",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "ShieldPay — Merchant desk",
@@ -30,18 +17,23 @@ export default function DashboardLayout({
 }) {
   return (
     <ThemeProvider>
-      <div className={`${sans.variable} ${serif.variable} dash-root`}>
-        <div className="flex min-h-screen flex-col md:flex-row">
-          <Suspense fallback={<div className="dash-sidebar hidden md:block md:w-60" />}>
+      <div className="dash-root">
+        <div className="dash-app-shell">
+          <Suspense fallback={<div className="dash-sidebar dash-sidebar-loading" />}>
             <DashboardNav />
           </Suspense>
-          <div className="min-w-0 flex-1">
-            <header className="border-b border-[var(--dash-line)] px-6 py-3">
-              <p className="text-[12px] text-[var(--dash-muted)]">
-                Demo desk · Mock Alerts are simulated · not Ethoca / Verifi
-              </p>
+          <div className="dash-main-shell">
+            <header className="dash-topbar">
+              <div className="dash-breadcrumbs">
+                <span>Northline</span><b>/</b><strong>Merchant operations</strong>
+              </div>
+              <div className="dash-topbar-actions">
+                <span className="dash-demo-pill"><span /> Demo environment</span>
+                <Link href="/shop" className="dash-view-store">View store <span>↗</span></Link>
+                <div className="dash-topbar-avatar">JD</div>
+              </div>
             </header>
-            <main className="mx-auto max-w-6xl px-6 py-8">{children}</main>
+            <main className="dash-main-content">{children}</main>
           </div>
         </div>
       </div>

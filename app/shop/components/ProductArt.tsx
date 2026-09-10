@@ -19,12 +19,16 @@ export default function ProductArt({
 
   return (
     <div
-      className={`shop-art ${className}`}
+      className={`shop-art shop-art-${image} ${className}`}
       style={{ background: swatch.bg, color: swatch.ink }}
       aria-hidden
     >
-      <span className="shop-art-initials">{initials}</span>
-      <span className="shop-art-label">{title}</span>
+      <div className="shop-art-grain" />
+      <div className="shop-art-object" />
+      <div className="shop-art-caption">
+        <span className="shop-art-initials">{initials}</span>
+        <span className="shop-art-label">{title}</span>
+      </div>
     </div>
   );
 }
